@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace UnitTestBob
@@ -28,7 +29,7 @@ namespace UnitTestBob
         public void test_shouting_gibberish()
         {
 
-            //the letters A-Z in all caps. i.e. DFSFkJEKJFWDFKD
+            
             remark = String.Join("", Enumerable.Range(65, 26)
                             .Select(a => new { A = (char)(a) })
                             .OrderBy(x => Guid.NewGuid()).Select(x => x.A));
